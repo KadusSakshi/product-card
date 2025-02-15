@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title> girl kurti Product Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f8f8;
+        }
+        .product-card {
+            background: #e8c92f;
+            padding: 20px;
+            width: 300px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .product-card img {
+            width: 80%;
+            border-radius: 8px;
+        }
+        .product-title {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+        .price {
+            color: #555;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .quantity-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        .btn {
+            background: #333;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 1.2em;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background: #555;
+        }
+        .quantity {
+            font-size: 1.2em;
+            min-width: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="product-card">
+        <img src="https://assets.myntassets.com/w_412,q_60,dpr_2,fl_progressive/assets/images/30017841/2024/8/29/47b033ca-6109-407c-a7e5-11cd8195bae61724919179048-FASHION-DREAM-Girls-Floral-Printed-Gotta-Patti-A-Line-Kurti--5.jpg" alt="girl kurti">
+        <h2 class="product-title">girl kurti</h2>
+        <p class="price">₹149.89</p>
+        <div class="quantity-container">
+            <button class="btn" onclick="changeQuantity(-1)">-</button>
+            <span class="quantity" id="quantity">1</span>
+            <button class="btn" onclick="changeQuantity(1)">+</button>
+        </div>
+    </div>
+
+    <script>
+        let quantity = 1;
+        function changeQuantity(amount) {
+            quantity += amount;
+            if (quantity < 1) quantity = 1;
+            document.getElementById('quantity').textContent = quantity;
+        }
+    </script>
+</body>
+</html>
